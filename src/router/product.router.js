@@ -26,12 +26,12 @@ productRouter.get(
     '/:id',
     async (req, res) => {
         const productId = req.params.id;
-        const products = await listarProductos(productId);
+        const product = await buscarProductoPorID(productId);
         res.json({
             ok: true,
             status: 200,
             message: "PRODUCTO ENCONTRADO",
-            data: products
+            data: product
         });
     }
 )

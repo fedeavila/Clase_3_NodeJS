@@ -4,6 +4,7 @@ async function buscarProductoPorID(id) {
     try {
         const producto = await Product.findById(id);
         console.log("PRODUCTO ENCONTRADO: ", producto);
+        return producto;
     } catch (error) {
         console.error("ERROR BUSCANDO PRODUCTO: ", error);
     }

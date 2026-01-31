@@ -24,7 +24,7 @@ async function listarProductos() {
 async function eliminarProductoPorID(id) {
     try {
         const deleted = await Product.findByIdAndDelete(id);
-        onsole.log(`PRODUCTO CON ID ${id} ELIMINADO EXITOSAMENTE!!!`);
+        console.log(`PRODUCTO CON ID ${id} ELIMINADO EXITOSAMENTE!!!`);
         return deleted;
     } catch (error) {
         console.error("ERROR ELIMINANDO PRODUCTO: ", error);
